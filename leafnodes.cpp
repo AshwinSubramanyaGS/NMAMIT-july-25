@@ -15,6 +15,14 @@ struct Node {
 
 // Function to print all leaf nodes
 void printLeafNodes(Node* root) {
+    if(root==nullptr)return ;
+    if(root->left==nullptr&&root->right==nullptr){
+        cout<<root->data<<" ";
+        return;
+    
+    }
+    if(root->left!=nullptr)printLeafNodes(root->left);
+    if(root->right!=nullptr)printLeafNodes(root->right);
     }
 
 // Example usage
